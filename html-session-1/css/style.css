@@ -1,0 +1,81 @@
+html,body{
+ height: 100%; 
+margin: 0.2em; 
+}
+
+.container{
+    height: 90%; 
+    width: 100%;
+    
+}
+.main{
+    display: flex; 
+    height: 90%;
+}
+
+header{
+background-color: greenyellow;
+height: 10%;
+color: white;
+}
+header>h1{
+    text-align: center;
+    margin: 0;
+}
+header>div{
+    text-align: center;
+}
+header>span{
+    
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+display: inline-block;
+
+} 
+div>nav{
+width: 10%;
+background-color: greenyellow;
+font-size: 1.3em;
+
+}
+nav>ul{
+    padding-left: 16px;
+    
+}
+nav a{
+text-decoration:  none;
+display: block;
+color:white;
+}
+section{
+border-color: gray;
+background-color: gray;
+width: 100%;
+}
+.loginform-class{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: auto;
+    padding-top: 15%;
+    font-weight: bold;
+}
+ .loginform-class>span{
+    display: flex;
+    margin:auto;
+} 
+/* .loginform-class #login-submit{
+    margin: auto;
+} */
+.loginform-class>p{
+    margin-left: 10%;
+    margin-bottom: 0.25em;
+}
+footer{
+border-color: greenyellow;
+background-color: greenyellow;
+height: 5%;
+text-align: center;
+
+}

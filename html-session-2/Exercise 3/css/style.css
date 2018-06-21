@@ -1,0 +1,97 @@
+/*
+for navigation : we can also use div and span inside. makes easy to align them instead of using li & a 
+for center alignment : make display table in parent div and child make margin auto/ display : table-cell
+image to fit inside div - use max-height 100%
+used - background color and border during development to visualise the div arrangements
+*/
+body, html{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.header{
+    
+    height: 10%;
+    /*border:1px solid red;*/
+    padding-top: 10px;
+    background-color: #31A2DD;   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.main-content{
+    height: 90%;
+    /*border:1px solid red;*/
+            
+    background-color: #F99024;
+}
+.item1{
+     /*border:1px solid red;*/
+       width: 20%;
+       height: 80%;     
+     /*background-color: blue;*/
+    
+}
+.item1 img{
+
+    max-height: 100%;
+         margin-left: 1em;
+}
+
+.item2{
+    /*border:1px solid red;*/
+    width: 20%;
+    height: 80%; 
+    /*background-color: yellow;*/
+      display: table;
+   
+    
+ 
+    
+}
+.item2 h2{
+   margin: auto;
+    text-align: center;
+    vertical-align: middle;
+     display:table-cell;
+}
+
+.item3{
+    /*border:1px solid red;*/
+    width: 20%;
+    height: 80%; 
+    /*background-color: green;*/
+    display: table;
+
+    
+}
+ul{
+    padding-left: 0;
+  
+}
+ul#horizontal-list li {
+    display: inline;
+   display:table-cell;
+    text-align:center;
+}
+.item3 a{
+    text-decoration:  none;
+    font-size: 1em;
+
+}
+
+/*verical align to make contents vertical align*/
+.item3 span {
+    padding-bottom: 0;
+      display:table-cell;
+      text-align:center;
+      vertical-align:middle;
+      font-weight: bold;
+}

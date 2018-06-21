@@ -1,0 +1,32 @@
+body, html{
+    height: 100%;
+    padding: 0;
+}
+.main{
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+.item1{
+     border:1px solid red;
+            
+     background-color: blue;
+    flex-grow: 1; 
+}
+
+.item2{
+    border:1px solid red;
+            
+    background-color: yellow;
+    flex-grow: 2;
+    
+}
+
+.item3{
+    border:1px solid red;
+            
+    background-color: green;
+    flex-grow: 1;
+}
