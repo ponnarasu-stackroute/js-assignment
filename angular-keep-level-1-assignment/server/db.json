@@ -1,0 +1,24 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "Read Angular 5 blog",
+      "text": "Shall do at 6 pm"
+    },
+    {
+      "title": "ponnarasu",
+      "text": "sample",
+      "id": 2
+    },
+    {
+      "title": "hello",
+      "text": "hello text\n",
+      "id": 3
+    },
+    {
+      "title": "test2",
+      "text": "testing",
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "Read Angular5 blog",
+      "text": "Shall do at 6 pm",
+      "state": "completed"
+    },
+    {
+      "id": 2,
+      "title": "Call Ravi",
+      "text": "Track the new submissions",
+      "state": "started"
+    },
+    {
+      "title": "Capitalism",
+      "text": "Mark Twain",
+      "id": 3,
+      "state": "completed"
+    },
+    {
+      "title": "ponnarasu",
+      "text": "sample text",
+      "state": "started",
+      "id": 4
+    },
+    {
+      "title": "test2",
+      "text": "rest2 notes",
+      "state": "started",
+      "id": 5
+    },
+    {
+      "title": "hello",
+      "text": "hell rtext",
+      "state": "completed",
+      "id": 6
+    }
+  ]
+}

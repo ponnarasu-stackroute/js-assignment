@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Socket.IO Chat</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Register</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="username" class="col-form-label">Username:</label>
+							<input type="text" class="form-control" id="username">
+						</div>
+						<div class="form-group">
+							<label for="channels" class="col-form-label">Channels (comma separated) :</label>
+							<input type="text" class="form-control" id="channels">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container" id="alertContainer">
+		
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<h4>Start sending messages..</h4>
+				<form>
+					<div class="form-group">
+						<label for="channel">Channel</label>
+						<input id="channel" placeholder="Type your channel" class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="message">Message</label>
+						<textarea id="message" placeholder="Type your message" class="form-control"></textarea>
+					</div>
+					<button class="btn btn-primary" type="submit">Submit</button>
+				</form>
+			</div>
+			<div class="col-12 col-md-6">
+				<h4>Join/Start new channels..</h4>
+				<form>
+					<div class="form-group">
+						<label for="newchannel">Channel</label>
+						<input id="newchannel" placeholder="Type your channel" class="form-control" list="channelsList" />
+						<datalist id="channelsList">
+						</datalist>
+					</div>
+					<button id="joinChannel" class="btn btn-success" type="button">Join</button>
+					<button id="leaveChannel" class="btn btn-danger" type="button">Leave</button>
+				</form>
+			</div>
+		</div>
+		<div id="chatContainer" class="row messagesList">
+		</div>
+	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+	<script type="text/javascript" src="/js/script.js"></script>
+	<script type="text/javascript">
+		$(window).on('load', function () {
+			$("#alertContainer").hide();
+			$('#exampleModal').modal();
+		});
+		const socket = io('http://localhost:3000');
+		$('form').on('submit', (event) => {
+			sendMessage(event, socket);
+		});
+		$('#joinChannel').on('click', (event) => {
+			joinChannel(event, socket);
+		});
+		$('#leaveChannel').on('click', (event) => {
+			leaveChannel(event, socket);
+		});
+		$('#exampleModal').on('hide.bs.modal', () => {
+			const usernameInpt = document.getElementById('username').value;
+			const channelsInpt = document.getElementById('channels').value;
+			const username = usernameInpt === '' ? 'Anonymous' : usernameInpt;
+			const channels = channelsInpt === '' ? [] : channelsInpt.split(',');
+			document.getElementById('username').value = username;
+			socket.emit('register', { username, channels });
+			socket.on('welcomeMessage', welcomeMessage => onWelcomeMessageReceived(welcomeMessage));
+			socket.on('newMessage', message => onNewMessageReceived(message));
+			socket.on('addedToChannel', data => onAddedToNewChannelReceived(data));
+			socket.on('removedFromChannel', data => onRemovedFromChannelReceived(data));
+		});
+	</script>
+</body>
+</html>

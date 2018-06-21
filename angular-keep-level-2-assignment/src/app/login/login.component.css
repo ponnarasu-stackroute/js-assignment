@@ -1,0 +1,22 @@
+.login-container{
+    width: 50vw;
+    margin: auto;
+    padding-top: 10vh;
+}
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+.login-wrapper > * {
+    width: 100%;
+}
+.error-message {
+    color: red;
+    padding: 1em 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

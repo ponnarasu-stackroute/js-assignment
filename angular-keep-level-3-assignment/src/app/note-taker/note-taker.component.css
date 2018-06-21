@@ -1,0 +1,16 @@
+.keep-note-panel {
+    width: 60vw;
+    margin: auto;
+}
+.keep-note-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.keep-note-button{
+    display : flex;
+    justify-content: flex-end;
+}
+.error-message {
+    color: red;
+    padding: 1em 0 0 0;
+}

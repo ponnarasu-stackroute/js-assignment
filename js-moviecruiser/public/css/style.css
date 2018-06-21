@@ -1,0 +1,31 @@
+body {
+	margin: 0;
+}
+li { /* styles all li elements*/
+    list-style-type: none;
+}
+.desc {
+	padding-bottom: 20px;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+img{
+    width: 200px;
+}
+
+button{
+    cursor: pointer;
+}
+
+ul{
+    padding-left: 0;
+}

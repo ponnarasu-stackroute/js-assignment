@@ -1,0 +1,26 @@
+.keep-card-notes, .keep-note-panel {
+    width: 50vw;
+    margin: auto;
+}
+.keep-card-note {
+    margin: 1.5em;
+}
+.keep-card-note-title {
+    font-size: 1.5em;
+}
+.keep-note-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.keep-note-button{
+    display : flex;
+    justify-content: flex-end;
+}
+.keep-note-panel {
+    margin-top: 2em;
+    margin-bottom: 2.5em;
+}
+.error-message {
+    color: red;
+    padding: 1em 0 0 0;
+}

@@ -1,0 +1,30 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "mozhi",
+      "overview": "Tamil classic movie",
+      "posterPath": "../images/movie1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "The Dark Knight Rises",
+      "overview": "All time fav super hero movie",
+      "posterPath": "../images/movie1.jpg"
+    },
+    {
+      "id": 3,
+      "title": "seval",
+      "overview": "direct by AL vijay ",
+      "posterPath": "../images/movie1.jpg"
+    }
+  ],
+  "favourites": [
+    {
+      "id": 2,
+      "title": "The Dark Knight Rises",
+      "overview": "All time fav super hero movie",
+      "posterPath": "../images/movie1.jpg"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+.keep-note-panel{
+    width: 50vw;
+    margin: auto;
+}
+.keep-note-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.keep-note-button{
+    display: flex;
+    justify-content: flex-end;
+}
